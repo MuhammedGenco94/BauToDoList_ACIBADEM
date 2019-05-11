@@ -1,0 +1,345 @@
+﻿@model BauToDoList.Models.ToDoItem
+
+@{
+    ViewBag.Title = "Yapılacak İşi Sil";
+}
+
+<h2>Sil</h2>
+
+<h3>Silmek İstediğinizden Emin Misiniz?</h3>
+<div>
+    <h4>Yapılacaklar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manager.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manager.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organizator.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organizator.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Side.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Side.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attachment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attachment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetingHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetingHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinishHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviseHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviseHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduledOrganizationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduledOrganizationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduledOrganizationHour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScheduledOrganizationHour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConversationSubject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConversationSubject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupporterCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupporterCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupporterDoctor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupporterDoctor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConversationAttendeeCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConversationAttendeeCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingSubjects)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingSubjects)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PosterSubjects)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PosterSubjects)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PosterCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PosterCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Elearning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elearning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypesOfScans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypesOfScans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AsoCountInScans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AsoCountInScans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypesOfOrganizations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypesOfOrganizations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AsoCountInOrganization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AsoCountInOrganization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypesOfVaccinationOrganization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypesOfVaccinationOrganization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AsoCountInVaccinationOrganization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AsoCountInVaccinationOrganization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountOfCompensantionForPoster)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountOfCompensantionForPoster)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorporateProductivityReport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorporateProductivityReport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeye Geri Dön", "Index")
+        </div>
+    }
+</div>

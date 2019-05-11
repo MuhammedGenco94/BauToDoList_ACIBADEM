@@ -1,0 +1,109 @@
+﻿@model IEnumerable<BauToDoList.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Kullanıcılar";
+}
+
+<h2>Kullanıcı Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni Oluştur", "Register", "Account", null, new { @class = "btn btn-primary" })
+    <a class="dt-button buttons-excel buttons-html5 btn yellow btn-outline" tabindex="0" aria-controls="sample-1" href="@Url.Action("ExportToExcel","ApplicationUsers")" style="float: right;"> <span>Excel Aktarım</span> </a>
+
+    <a class="dt-button buttons-excel buttons-html5 btn purple btn-outline" tabindex="0" aria-controls="sample-1" href="@Url.Action("ExportToCsv","ApplicationUsers")" style="float: right;"> <span>Csv Aktarım</span> </a>
+</p>
+<table id="tblRecords" class="table">
+    <thead>
+        <tr>
+            <th class="text-nowrap all">
+                @*@Html.DisplayNameFor(model => model.Email)*@
+                E-Posta
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.EmailConfirmed)*@
+                E-Posta Onay
+            </th>
+            @*<th class="text-nowrap">
+                @Html.DisplayNameFor(model => model.PasswordHash)
+            </th>
+            <th class="text-nowrap">
+                @Html.DisplayNameFor(model => model.SecurityStamp)
+            </th>*@
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.PhoneNumber)*@
+                Telefon
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.PhoneNumberConfirmed)*@
+                Telefon Onay
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.TwoFactorEnabled)*@
+                İki Aşamalı Kimlik Doğrulama Etkin
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.LockoutEndDateUtc)*@
+                Kilitleme Bitiş Tarihi
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.LockoutEnabled)*@
+                Kilitleme Etkin
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.AccessFailedCount)*@
+                Başarısız Erişim Sayısı
+            </th>
+            <th class="text-nowrap">
+                @*@Html.DisplayNameFor(model => model.UserName)*@
+                Kullanıcı Adı
+            </th>
+            <th data-orderable="false" class="all">Eylemler</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.PasswordHash)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecurityStamp)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TwoFactorEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LockoutEnabled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccessFailedCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-xs" })
+                    @Html.ActionLink("Ayrıntılar", "Details", new { id = item.Id }, new { @class = "btn btn-success btn-xs" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

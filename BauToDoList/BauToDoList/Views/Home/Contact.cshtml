@@ -1,0 +1,54 @@
+﻿@model BauToDoList.Models.Contact
+@{
+    ViewBag.Title = "Contact";
+}
+<style>
+    td {
+        padding: 3px;
+    }
+</style>
+<h2>@ViewBag.Title</h2>
+<h2>@ViewBag.Message</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <table>
+        <tr>
+            <td>Ad :</td>
+            <td>
+                @Html.EditorFor(m => m.FirstName, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </td>
+        </tr>
+        <tr>
+            <td>Soyad :</td>
+            <td>
+                @Html.EditorFor(m => m.LastName, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>Telefon :</td>
+            <td>
+                @Html.EditorFor(m => m.Phone, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Phone)
+            </td>
+        </tr>
+        <tr>
+            <td>E-Posta :</td>
+            <td>
+                @Html.EditorFor(m => m.Email, new { htmlAttribute = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.Email)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Kaydet" class="btn btn-primary" /></td>
+        </tr>
+    </table>
+
+}
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

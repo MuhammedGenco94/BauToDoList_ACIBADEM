@@ -1,0 +1,228 @@
+﻿
+<div class="page-sidebar-wrapper">
+    <!-- BEGIN SIDEBAR -->
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <div class="page-sidebar navbar-collapse collapse">
+        <!-- BEGIN SIDEBAR MENU -->
+        <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+        <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+        <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+        <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+        <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+            <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+            <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+            <li class="sidebar-toggler-wrapper hide">
+                <div class="sidebar-toggler">
+                    <span></span>
+                </div>
+            </li>
+            <!-- END SIDEBAR TOGGLER BUTTON -->
+            <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+
+            <li class="nav-item start @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="Home"?"active":string.Empty) ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-home"></i>
+                    <span class="title">Başlangıç</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item start ">
+                        <a href="@Url.Action("Index","Home")" class="nav-link ">
+                            <i class="icon-bar-chart"></i>
+                            <span class="title">Giriş Sayfası</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="@Url.Action("About","Home")" class="nav-link ">
+                            <i class="icon-bar-chart"></i>
+                            <span class="title">Hakkımızda Sayfası</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="@Url.Action("Contact","Home")" class="nav-link ">
+                            <i class="icon-bar-chart"></i>
+                            <span class="title">İletişim Sayfası</span>
+                        </a>
+                    </li>
+                    <li class="nav-item start ">
+                        <a href="@Url.Action("Kurumsal","Home")" class="nav-link ">
+                            <i class="icon-bar-chart"></i>
+                            <span class="title">Kurumsal Sayfası</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            
+                
+
+
+            <li class="heading">
+                <h3 class="uppercase">modüller</h3>
+            </li>
+
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="todoitems"?"active":string.Empty) ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-rocket"></i>
+                    <span class="title">Yapılacaklar</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","ToDoItems")" class="nav-link ">
+                            <span class="title">Tüm Yapılacaklar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","ToDoItems")" class="nav-link ">
+                            <span class="title">Yapılacak Ekle</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="customers"?"active":string.Empty) ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-user"></i>
+                    <span class="title">Müşteriler</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Customers")" class="nav-link ">
+                            <span class="title">Tüm Müşteriler</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Customers")" class="nav-link ">
+                            <span class="title">Müşteri Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="contacts"?"active":string.Empty)  ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-users"></i>
+                    <span class="title">Kişiler</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Contacts")" class="nav-link ">
+                            <span class="title">
+                                Tüm Kişiler
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Contacts")" class="nav-link ">
+                            <span class="title"> Kişi Ekle </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="media"?"active":string.Empty)">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="glyphicon glyphicon-folder-open"></i>
+                    <span class="title">Dosyalar</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Media")" class="nav-link ">
+                            <span class="title">Tüm Dosyalar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Media")" class="nav-link ">
+                            <span class="title">Dosya Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="categories"?"active":string.Empty)">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-briefcase"></i>
+                    <span class="title">Kategoriler</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Categories")" class="nav-link ">
+                            <span class="title">Tüm Kategoriler</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Categories")" class="nav-link ">
+                            <span class="title">Kategori Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="departments"?"active":string.Empty)">
+                <a href="?p=" class="nav-link nav-toggle">
+                    <i class="glyphicon glyphicon-list-alt"></i>
+                    <span class="title">Departmanlar</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Departments")" class="nav-link ">
+                            <span class="title">Tüm Deparmanlar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Departments")" class="nav-link ">
+                            <span class="title">Departman Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="sides"?"active":string.Empty)">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-shield"></i>
+                    <span class="title">Taraflar</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","Sides")" class="nav-link ">
+                            <span class="title">Tüm Taraflar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Create","Sides")" class="nav-link ">
+                            <span class="title">Taraf Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item @(ViewContext.RouteData.Values["controller"].ToString().ToLowerInvariant()=="applicationusers"?"active":string.Empty)">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="fa fa-users"></i>
+                    <span class="title">Kullanıcılar</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Index","ApplicationUsers")" class="nav-link ">
+                            <span class="title">Tüm Kullanıcılar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="@Url.Action("Register","Account")" class="nav-link ">
+                            <span class="title">Kullanıcı Ekle</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- END SIDEBAR MENU -->
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+</div>

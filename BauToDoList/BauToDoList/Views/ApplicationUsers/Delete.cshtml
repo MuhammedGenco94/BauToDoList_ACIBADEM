@@ -1,0 +1,112 @@
+﻿@model BauToDoList.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h2>Sil</h2>
+
+<h3>Silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>ApplicationUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            E-Posta
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            E-Posta Onay
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailConfirmed)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.PasswordHash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PasswordHash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityStamp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecurityStamp)
+        </dd>*@
+
+        <dt>
+            Telefon
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            Telefon Onay
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+        </dd>
+
+        <dt>
+            İki Aşamalı Doğrulama Etkin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TwoFactorEnabled)
+        </dd>
+
+        <dt>
+            Kilitleme Bitiş Tarihi
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEndDateUtc)
+        </dd>
+
+        <dt>
+            Kilitleme Etkin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEnabled)
+        </dd>
+
+        <dt>
+            Başarısız Erişim Sayısı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessFailedCount)
+        </dd>
+
+        <dt>
+            Kullanıcı Adı
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Geri Dön", "Index")
+        </div>
+    }
+</div>
